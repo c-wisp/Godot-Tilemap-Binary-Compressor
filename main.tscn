@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://yvaf7ujmwwmx"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_44kf3"]
+[ext_resource type="Script" path="res://FileIO.gd" id="2_p6o2s"]
+[ext_resource type="Script" path="res://Interpreter.gd" id="3_2e2hi"]
+[ext_resource type="PackedScene" uid="uid://bwydc13rpss2f" path="res://Testing/Testmap.tscn" id="4_16qw7"]
+[ext_resource type="Script" path="res://Key.gd" id="5_dywy7"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_44kf3")
+
+[node name="File IO" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_p6o2s")
+
+[node name="Interpreter" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("3_2e2hi")
+
+[node name="Tilemap" parent="." instance=ExtResource("4_16qw7")]
+
+[node name="Key" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_dywy7")
+tilesets = Array[String](["res://Testing/MiniProto.tres"])

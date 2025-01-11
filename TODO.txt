@@ -1,0 +1,13 @@
+add map settings
+	(offset amount (to allow negative positions (use 2's compliment)))
+	(try using tilemap.get_used_rect())
+
+add compressing binary tiledata (+2B for length ct)
+
+allow compressing multiple tilemaps into one file
+	(would allow saving as .lvl)
+	
+convert proj to 4.3 & 3.5
+	(4.0-4.2.2 tilemaps become deprecated and merged back w/ 3.5 tilemaps next update (more or less))
+	(having something for 4.3 & 3.5 would be nice)
+	(although keeping a copy of 4.2.2 wouldnt hurt for those folks)
